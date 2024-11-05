@@ -1,0 +1,6 @@
+require("sulring.leader") 
+require("sulring.lazy")
+require("sulring.settings")
+--require("sulring.replace")
+require("sulring.commands")
+require("sulring.remap")
