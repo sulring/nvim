@@ -1,9 +1,8 @@
 return {
 	require("sulring.plugins.navigation.telescope"),
 	{
-		dir = "~/dev/tagonaut.nvim",
+		"Sulring/tagonaut.nvim",
 		name = "tagonaut",
-		dev = true,
 		dependencies = {
 			"plenary",
 			"devicons",

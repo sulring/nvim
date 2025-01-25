@@ -1,8 +1,7 @@
 return {
 	{
-		dir = "~/dev/suthema.nvim",
+		"Sulring/suthema.nvim",
 		name = "suthema",
-		dev = true,
 		config = function()
 			require("suthema").setup({
         use_telescope = false
