@@ -73,3 +73,6 @@ vim.api.nvim_set_keymap("n", "<Esc>", ":nohlsearch<CR>", { noremap = true, silen
 -- zenmode
 local zenmode = require("zen-mode")
 map("", "<leader>`", zenmode.toggle)
+
+vim.keymap.set('n', '<C-y>', ':!copy -all %:p<CR>', { silent = true })
+vim.keymap.set('n', '<C-S-y>', ':!copy -all --add %:p<CR>', { silent = true })

@@ -5,8 +5,8 @@ vim.g.node_host_prog = "/home/BolotinI/.volta/bin/neovim-node-host"
 
 -- Numbers
 --
-
-vim.api.nvim_command("set number relativenumber")
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- Indents
 --
