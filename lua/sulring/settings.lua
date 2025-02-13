@@ -1,6 +1,12 @@
-vim.g.node_host_prog = os.getenv("HOME") .. "/.volta/tools/image/packages/neovim/lib/node_modules/neovim/bin/cli.js"
+-- Volta nvim:
+print("Configuration loaded successfully")
+--
+vim.g.node_host_prog = "/home/BolotinI/.volta/bin/neovim-node-host"
 
-vim.api.nvim_command("set number relativenumber")
+-- Numbers
+--
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 
 local function set_language_settings(opts)
