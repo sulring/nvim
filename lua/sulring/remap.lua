@@ -16,13 +16,8 @@ map("n", "<leader>?", function()
 	whichkey.show({ global = false })
 end, { desc = "HELP ME!" })
 
--- Copy/Paste
 map("n", "<C-a>", "ggVG", { desc = "Select All" })
-map("i", "<C-p>", '<Esc>"+pi', { desc = "Paste in Insert" })
-map("n", "<C-p>", '"+p', { desc = "Paste" })
-map({ "v", "n" }, "<C-y>", '"+y', { desc = "Copy" })
-map("n", "Y", "y$", { desc = "Copy to the end of line" })
--- New line
+
 map("n", "<CR>", "o<Esc>k", { desc = "newline below" })
 map("n", "<S-CR>", "i<CR><Esc>k", { desc = "Split to new line" })
 
@@ -51,5 +46,7 @@ vim.api.nvim_set_keymap("n", "<Esc>", ":nohlsearch<CR>", { noremap = true, silen
 local zenmode = require("zen-mode")
 map("", "<leader>`", zenmode.toggle)
 
-vim.keymap.set('n', '<C-y>', ':!copy -all %:p<CR>', { silent = true })
-vim.keymap.set('n', '<C-S-y>', ':!copy -all --add %:p<CR>', { silent = true })
+vim.keymap.set('n', '<M-y>', ':!copy -all %:p<CR>', { silent = true })
+vim.keymap.set('n', '<M-S-y>', ':!copy -all --add %:p<CR>', { silent = true })
+
+require("sulring.clipboard.mapping")
